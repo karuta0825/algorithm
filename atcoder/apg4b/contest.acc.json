@@ -1,0 +1,669 @@
+{
+  "contest": {
+    "id": "apg4b",
+    "title": "C++入門 AtCoder Programming Guide for beginners (APG4b)",
+    "url": "https://atcoder.jp/contests/apg4b"
+  },
+  "tasks": [
+    {
+      "id": "APG4b_a",
+      "label": "A",
+      "title": "1.00.はじめに",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_a",
+      "directory": {
+        "path": "a",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_b",
+      "label": "B",
+      "title": "1.01.出力とコメント",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_c",
+      "label": "C",
+      "title": "1.02.プログラムの書き方とエラー",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_c",
+      "directory": {
+        "path": "c",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_d",
+      "label": "D",
+      "title": "1.03.四則演算と優先順位",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_e",
+      "label": "E",
+      "title": "1.04.変数と型",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_e",
+      "directory": {
+        "path": "e",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_f",
+      "label": "F",
+      "title": "1.05.実行順序と入力",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_f",
+      "directory": {
+        "path": "f",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_g",
+      "label": "G",
+      "title": "1.06.if文・比較演算子・論理演算子",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_g",
+      "directory": {
+        "path": "g",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_h",
+      "label": "H",
+      "title": "1.07.条件式の結果とbool型",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_h",
+      "directory": {
+        "path": "h",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_i",
+      "label": "I",
+      "title": "1.08.変数のスコープ",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_i",
+      "directory": {
+        "path": "i",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_j",
+      "label": "J",
+      "title": "1.09.複合代入演算子",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_j",
+      "directory": {
+        "path": "j",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_k",
+      "label": "K",
+      "title": "1.10.while文",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_k",
+      "directory": {
+        "path": "k",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_l",
+      "label": "L",
+      "title": "1.11.for文・break・continue",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_l",
+      "directory": {
+        "path": "l",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_m",
+      "label": "M",
+      "title": "1.12.文字列と文字",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_m",
+      "directory": {
+        "path": "m",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_n",
+      "label": "N",
+      "title": "1.13.配列",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_n",
+      "directory": {
+        "path": "n",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_o",
+      "label": "O",
+      "title": "1.14.STLの関数",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_o",
+      "directory": {
+        "path": "o",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_p",
+      "label": "P",
+      "title": "1.15.関数",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_p",
+      "directory": {
+        "path": "p",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_q",
+      "label": "Q",
+      "title": "2.00.第2章について",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_q",
+      "directory": {
+        "path": "q",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_r",
+      "label": "R",
+      "title": "2.01.ループの書き方と範囲for文",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_r",
+      "directory": {
+        "path": "r",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_s",
+      "label": "S",
+      "title": "2.02.多重ループ",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_s",
+      "directory": {
+        "path": "s",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_t",
+      "label": "T",
+      "title": "2.03.多次元配列",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_t",
+      "directory": {
+        "path": "t",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_u",
+      "label": "U",
+      "title": "2.04.参照",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_u",
+      "directory": {
+        "path": "u",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_v",
+      "label": "V",
+      "title": "2.05.再帰関数",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_v",
+      "directory": {
+        "path": "v",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_w",
+      "label": "W",
+      "title": "2.06.計算量",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_w",
+      "directory": {
+        "path": "w",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_x",
+      "label": "X",
+      "title": "3.00.第3章について",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_x",
+      "directory": {
+        "path": "x",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_y",
+      "label": "Y",
+      "title": "3.01.数値型",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_y",
+      "directory": {
+        "path": "y",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_z",
+      "label": "Z",
+      "title": "3.02.pair／tupleとauto",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_z",
+      "directory": {
+        "path": "z",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_aa",
+      "label": "AA",
+      "title": "3.03.STLのコンテナ",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_aa",
+      "directory": {
+        "path": "aa",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_ab",
+      "label": "AB",
+      "title": "3.04.構造体",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_ab",
+      "directory": {
+        "path": "ab",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_ac",
+      "label": "AC",
+      "title": "3.05.ビット演算",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_ac",
+      "directory": {
+        "path": "ac",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_ad",
+      "label": "AD",
+      "title": "3.06.その他の機能",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_ad",
+      "directory": {
+        "path": "ad",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_ae",
+      "label": "AE",
+      "title": "4.00.第4章について",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_ae",
+      "directory": {
+        "path": "ae",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_af",
+      "label": "AF",
+      "title": "4.01.includeディレクティブ",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_af",
+      "directory": {
+        "path": "af",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_ag",
+      "label": "AG",
+      "title": "4.02.名前空間",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_ag",
+      "directory": {
+        "path": "ag",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_ah",
+      "label": "AH",
+      "title": "4.03.テンプレート",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_ah",
+      "directory": {
+        "path": "ah",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_ai",
+      "label": "AI",
+      "title": "4.04.イテレータ",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_ai",
+      "directory": {
+        "path": "ai",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_aj",
+      "label": "AJ",
+      "title": "4.05.ポインタ",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_aj",
+      "directory": {
+        "path": "aj",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_cv",
+      "label": "EX1",
+      "title": "1.01",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_cv",
+      "directory": {
+        "path": "ex1",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_cu",
+      "label": "EX2",
+      "title": "1.02",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_cu",
+      "directory": {
+        "path": "ex2",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_ct",
+      "label": "EX3",
+      "title": "1.03",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_ct",
+      "directory": {
+        "path": "ex3",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_cs",
+      "label": "EX4",
+      "title": "1.04",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_cs",
+      "directory": {
+        "path": "ex4",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_cr",
+      "label": "EX5",
+      "title": "1.05",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_cr",
+      "directory": {
+        "path": "ex5",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_cq",
+      "label": "EX6",
+      "title": "1.06",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_cq",
+      "directory": {
+        "path": "ex6",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_cp",
+      "label": "EX7",
+      "title": "1.07",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_cp",
+      "directory": {
+        "path": "ex7",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_co",
+      "label": "EX8",
+      "title": "1.08",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_co",
+      "directory": {
+        "path": "ex8",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_cn",
+      "label": "EX9",
+      "title": "1.09",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_cn",
+      "directory": {
+        "path": "ex9",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_cm",
+      "label": "EX10",
+      "title": "1.10",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_cm",
+      "directory": {
+        "path": "ex10",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_cl",
+      "label": "EX11",
+      "title": "1.11",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_cl",
+      "directory": {
+        "path": "ex11",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_ck",
+      "label": "EX12",
+      "title": "1.12",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_ck",
+      "directory": {
+        "path": "ex12",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_cj",
+      "label": "EX13",
+      "title": "1.13",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_cj",
+      "directory": {
+        "path": "ex13",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_ci",
+      "label": "EX14",
+      "title": "1.14",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_ci",
+      "directory": {
+        "path": "ex14",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_ch",
+      "label": "EX15",
+      "title": "1.15",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_ch",
+      "directory": {
+        "path": "ex15",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_cg",
+      "label": "EX16",
+      "title": "2.01",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_cg",
+      "directory": {
+        "path": "ex16",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_cf",
+      "label": "EX17",
+      "title": "2.02",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_cf",
+      "directory": {
+        "path": "ex17",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_ce",
+      "label": "EX18",
+      "title": "2.03",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_ce",
+      "directory": {
+        "path": "ex18",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_cd",
+      "label": "EX19",
+      "title": "2.04",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_cd",
+      "directory": {
+        "path": "ex19",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_cc",
+      "label": "EX20",
+      "title": "2.05",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_cc",
+      "directory": {
+        "path": "ex20",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_cb",
+      "label": "EX21",
+      "title": "2.06",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_cb",
+      "directory": {
+        "path": "ex21",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_ca",
+      "label": "EX22",
+      "title": "3.02",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_ca",
+      "directory": {
+        "path": "ex22",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_bz",
+      "label": "EX23",
+      "title": "3.03",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_bz",
+      "directory": {
+        "path": "ex23",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_by",
+      "label": "EX24",
+      "title": "3.04",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_by",
+      "directory": {
+        "path": "ex24",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_bx",
+      "label": "EX25",
+      "title": "3.05",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_bx",
+      "directory": {
+        "path": "ex25",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_bw",
+      "label": "EX26",
+      "title": "3.06",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_bw",
+      "directory": {
+        "path": "ex26",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_ak",
+      "label": "AP1",
+      "title": "付録1.コードテストの使い方",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_ak",
+      "directory": {
+        "path": "ap1",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_al",
+      "label": "AP2",
+      "title": "付録2.提出結果の見方",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_al",
+      "directory": {
+        "path": "ap2",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_am",
+      "label": "AP3",
+      "title": "付録3.コンパイルエラー集",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_am",
+      "directory": {
+        "path": "ap3",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "APG4b_an",
+      "label": "AP4",
+      "title": "付録4.ループの裏技repマクロ",
+      "url": "https://atcoder.jp/contests/apg4b/tasks/APG4b_an",
+      "directory": {
+        "path": "ap4",
+        "testdir": "tests"
+      }
+    }
+  ]
+}

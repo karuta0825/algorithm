@@ -1,0 +1,2 @@
+(println "こんにちは")
+(println "AtCoder")
