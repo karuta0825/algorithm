@@ -1,4 +1,3 @@
-
 N, M = map(int, input().split())
 values = [list(map(int, input().split())) for i in range(M)]
 
@@ -18,7 +17,7 @@ for f,s in values:
     if not (s in streetMap):
         streetMap[s] = [f]
     else:
-        streetMap[s] = [* streetMap[s], f]        
+        streetMap[s] = [* streetMap[s], f]
 
 # 全探索だけど、三重ループでcontinueをつかってショートカットすれば良い。
 result = 0
@@ -31,6 +30,5 @@ for i in range(1,N+1):
                 continue
             if (check(i,j) and check(j,k) and check(k,i)):
                 result += 1
-                
+
 print(result)
-    
