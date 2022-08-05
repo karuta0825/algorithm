@@ -2,28 +2,35 @@
 N, M = map(int, input().split())
 values = [list(map(int, input().split())) for i in range(M)]
 
-# Nから3つの組み合わせを取得する
-for i in 1 << N:
-    print(format(i, 'b'))
+def check(i,j):
+    if i in streetMap:
+        return j in streetMap[i]
+    else:
+        return False
 
+streetMap = {}
+for f,s in values:
+    if not (f in streetMap):
+        streetMap[f] = [s]
+    else:
+        streetMap[f] = [* streetMap[f], s]
 
-result = []
-for i in range(1 << 5):
-    str = format(i, 'b')
-    if (len(list(filter(lambda v: v == '1', str))) == 3):
-        r = []
-        z = str.zfill(5)
-        print(z)
-        for j in range(len(z)):
-            print(z[j])
-            if (z[j] == '1'):
-                r.append(j + 1)
-        result.append(r)
+    if not (s in streetMap):
+        streetMap[s] = [f]
+    else:
+        streetMap[s] = [* streetMap[s], f]        
 
-# これでいいのかん？
-def check(ary):
-    return false;
-        
-for l in result:
-    
+# 全探索だけど、三重ループでcontinueをつかってショートカットすれば良い。
+result = 0
+for i in range(1,N+1):
+    for j in range(1,N+1):
+        if (i >= j):
+            continue
+        for k in range(1,N+1):
+            if (j >= k):
+                continue
+            if (check(i,j) and check(j,k) and check(k,i)):
+                result += 1
+                
+print(result)
     
