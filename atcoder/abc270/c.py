@@ -22,21 +22,23 @@ for [c, p] in inputs:
 def c2p(breads, key):
     if (not (key in cmap)):
         breads.append(key)
-        return breads
+        return breads    
+    elif (key < cmap[key]):
+        breads.append(key)        
+        return breads;
     else:
         breads.append(key)
         nextv = cmap[key]
         return c2p(breads, nextv)
     
 
-
 xroute = c2p([], X)
 yroute = c2p([], Y)
 
 # ２つの配列の共通要素を見つけるものはないか？集合であるよな
-print(set(xroute).intersection(yroute))
+# print(set(xroute).intersection(yroute))
 intersectionPoint = sorted(set(xroute).intersection(yroute), reverse=True)[0]
-print(intersectionPoint);
+# print(intersectionPoint);
 
 xx = []
 for i in xroute:
