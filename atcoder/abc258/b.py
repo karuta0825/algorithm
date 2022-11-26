@@ -6,11 +6,16 @@ M = 0
 As = [input() for _ in range(n)]
 pos = []
 
+# flattenをつかってもよさそうだね
+# sum(As, [])
+map(list, As)
+
 # 最大値のものが複数ある場合はいずれの場合も確認しないと
-for a in As:
-    for v in a:
-        if (int(v) > M):
-            M = int(v)
+# for a in As:
+#     for v in a:
+#         if (int(v) > M):
+#             M = int(v)
+
 
 for i in range(len(As)):
     for j in range(len(As[i])):
