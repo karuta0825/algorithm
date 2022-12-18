@@ -21,15 +21,16 @@ for i in range(len(A)):
     left_maxes.append(leftv)
     right_maxes.append(rightv)
 
+print(left_maxes)
+print(right_maxes)
+
 for d in range(D):
     left , right = map(int, input().split())
 
     left -= 1
     right -= 1
 
-    # print([left, right, right_reverse])
-    # print([left_maxes[left-1], right_maxes[right_reverse]])
-
-    result = max(left_maxes[left-1], right_maxes[len(A) - right- 1])
+    # - 2というのが味噌。いやーこういうのを間違えないような工夫をしたいな。
+    result = max(left_maxes[left-1], right_maxes[len(A) - right - 2])
 
     print(result)
