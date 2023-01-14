@@ -1,4 +1,4 @@
-llimport sys
+import sys
 sys.setrecursionlimit(10**9)
 
 N, X, Y = map(int, input().split())
