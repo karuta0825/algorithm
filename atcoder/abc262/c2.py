@@ -6,7 +6,6 @@ for i in range(N):
     A[i] -= 1
 
 same = 0
-# a_i = i and a_j = j
 
 for (i, x) in enumerate(A):
     if (i == x):
