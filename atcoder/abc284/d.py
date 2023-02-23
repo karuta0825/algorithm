@@ -8,18 +8,17 @@ def searchPQ(n):
     q = 0
     while i ** 3 <= n:
 
-        if (not (n % i == 0)):
-            i += 1
-            continue
+        if (n % i == 0):
 
-        if ((n / i) % i == 0):
-            p = i
-            q = int(n / i / i)
-        else:
-            q = i
-            p = int(math.sqrt(n/i))
-
-        break
+            if ((n / i) % i == 0):
+                p = i
+                q = n // i ** 2
+            else:
+                q = i
+                p = int(math.sqrt(n//i))
+                
+            break
+        i += 1
 
     return [p, q]
 
@@ -27,27 +26,27 @@ def searchPQ(n):
 # それは素数だからである。そういうことだな。
 # あぁなるほど。素数をそういう意味に使うのか！
 # これは悔しいな。素数かどうかの判定ではなくて割り切れないという特徴なんだ。
-def searchPQ2(n):
+# def searchPQ2(n):
 
-    for i in range(2, int(n ** 1/3)):
+#     for i in range(2, int(n ** 1/3)):
 
-        if (not (n % i == 0)):
-            continue
+#         if (not (n % i == 0)):
+#             continue
 
-        if ((n / i) % i == 0):
-            p = i
-            q = int(n / i / i)
-        else:
-            q = i
-            p = int(math.sqrt(n/i))
+#         if ((n / i) % i == 0):
+#             p = i
+#             q = int(n / i / i)
+#         else:
+#             q = i
+#             p = int(math.sqrt(n/i))
 
-        break
+#         break
 
-    return [p, q]
+#     return [p, q]
 
 
 
 for _ in range(T):
 
     N = int(input())
-    print(*searchPQ2(N))
+    print(*searchPQ(N))

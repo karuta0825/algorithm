@@ -26,15 +26,15 @@ for _ in range(M):
 # dfsとbfsを実装してみよう
 # 再帰が必要になるんだよな。。。
 # dfsができない。
-def bfs(i, r):
-    global cnt
+# この関数はいやだな
+def bfs(i, r, c):
     # 終了条件を入れる
     if (visited[i] == 1):
-        return r
+        return c
 
     visited[i] = 1
     if (len(r) == 0):
-        cnt += 1
+        c += 1
 
     queue = obj[i][:]
 
@@ -44,9 +44,9 @@ def bfs(i, r):
             continue
         else:
             r.append(q)
-            r = bfs(q, r)
+            bfs(q, r, c)
 
-    return r
+    return c
 
 # visited = [0] * 6
 # obj = {
@@ -59,7 +59,7 @@ def bfs(i, r):
 # for i in range(1, N+2):
 for i in range(1, N+1):
     r = []
-    ary = bfs(i, r)
+    cnt += bfs(i, r, 0)
     # if(len(ary) > 0):
     #     cnt += 1
 

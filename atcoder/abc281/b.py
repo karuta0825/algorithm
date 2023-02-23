@@ -1,27 +1,19 @@
 import re
 S = input()
 
-p = re.compile("{}".format("[A-Z][1-9][0-9]*[A-Z]"))
+p = re.compile("{}".format("^[A-Z][1-9][0-9]*[A-Z]$"))
 
-# p = re.compile("".format("(?P<A>[A-Z])(?P<V>[0-9]{6})(?P<B>[A-Z])"))
-
-# p.findall("")
-
-# "A0B"[1:2]
-# "010".isdigit()
+# p = re.compile("{}".format("[A-Z][1-9]{1}[0-9]*[A-Z]"))
+# このようにかくとre.match(p, "A101XX")でアウトになる
+# 先頭から一致していて最後が違う場合もヒットしてしまうため
 
 result = "Yes"
 if (re.match(p, S)):
-    length = len(S)
-    v = S[1:length-1]
-    if (not v.isdigit()):
-        result = "No"
+    num = int(S[1:len(S)-1])
+    if (100000 <= num <= 999999):
+        result = "Yes"
     else:
-        num = int(v)
-        if (100000 <= num <= 999999):
-            result = "Yes"
-        else:
-            result = "No"
+        result = "No"
 else:
     result = "No"
 

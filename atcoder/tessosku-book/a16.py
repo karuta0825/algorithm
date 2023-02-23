@@ -5,8 +5,6 @@ N = int(input())
 A = [0, *list(map(int, input().split()))]
 B = [0, 0, *list(map(int, input().split()))]
 
-
-
 # def getMin(pos, accm):
 #     # どっちが選択されたのかわからない
 #     # print(pos, A, B)

@@ -1,6 +1,6 @@
 A, B = map(int, input().split())
 # 35 15の最大公約数
-# GTMだっけ？
+# GCD Greatest Common divisorだっけ？
 # これ決まってるよね？
 
 def gcd(a, b):

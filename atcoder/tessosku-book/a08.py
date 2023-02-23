@@ -1,9 +1,11 @@
 H, W = map(int, input().split())
 Xs = [list(map(int, input().split())) for _ in range(H)]
+# Xs = [list(int, input().split()) for _ in range(H)]
 Q = int(input())
 ABCD = [list(map(int, input().split())) for _ in range(Q)]
 
-
+# 愚直なやり方
+# 毎回のループでメモ化するのはあり
 for abcd in ABCD:
     a = abcd[0] - 1
     b = abcd[1] - 1

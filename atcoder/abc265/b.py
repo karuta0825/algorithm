@@ -6,8 +6,6 @@ obj = {}
 for [i, y] in [list(map(int, input().split())) for _ in range(m)]:
     obj[i-1] = y
 
-# print(obj)
-
 result = "Yes"
 for i in range(len(an)):
     t -= an[i]

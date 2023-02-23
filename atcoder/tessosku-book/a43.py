@@ -1,19 +1,12 @@
 N, L = map(int, input().split())
-
-E = []
-W = []
-
+ans = 0
 for _ in range(N):
     A, B = map(lambda x:x, input().split())
     A = int(A)
 
     if (B == 'E'):
-        E.append(A)
+        ans = max(ans, L - A)
     else:
-        W.append(A)
+        ans = max(ans, A)
 
-
-e = abs(L - min(E)) if len(E) > 0 else 0
-w = max(W) if len(W) > 0 else 0
-
-print(max(e, w))
+print(ans)

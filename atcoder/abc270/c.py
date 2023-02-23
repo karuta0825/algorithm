@@ -1,61 +1,69 @@
 N, X, Y = map(int, input().split())
 inputs = [list(map(int, input().split())) for i in range(N-1)]
 
-# 親をキーにするデータ構造
-# pmap = {
-#     1: [2,3],
-#     3: [4,5]
-# }
-
-# 子をキーにするデータ構造
-# こっちを使えば探索ははやくなるな！
-# cmap = {
-#     2: 1,
-#     3: 1,
-#     4: 3,
-#     5: 3
-# }
-cmap = {}
+graph = [[] for i in range(N+1)] 
 for [c, p] in inputs:
-    cmap[p] = c
+    graph[c].append(p);
+    graph[p].append(c);    
 
-def c2p(breads, key):
-    if (not (key in cmap)):
-        breads.append(key)
-        return breads    
-    elif (key < cmap[key]):
-        breads.append(key)        
-        return breads;
-    else:
-        breads.append(key)
-        nextv = cmap[key]
-        return c2p(breads, nextv)
+# print(graph);
+# routes = [False] * (N + 1)
+
+# # 探索途中をstackをつかって表すって感じかな
+# # だいぶよくなったな。そろそろ解答みてもよい時期だろうな
+# # これでもRuntimeエラーが発生するｑ
+# def c2p(start, goal, acm):
+#     # print("start", start)
+#     routes[start] = True
+
+#     acm.append(start);
+#     selections = graph[start]
     
+#     for v in selections:
+#         if routes[v]:
+#             continue
+#         if (v == goal):
+#             acm.append(v)
+#             break
+        
+#         tmp = c2p(v, goal, acm)
 
-xroute = c2p([], X)
-yroute = c2p([], Y)
+#         if (tmp[-1] != goal):
+#             acm = tmp[:-1]
+#         else:
+#             acm = tmp
+#             break
 
-# ２つの配列の共通要素を見つけるものはないか？集合であるよな
-# print(set(xroute).intersection(yroute))
-intersectionPoint = sorted(set(xroute).intersection(yroute), reverse=True)[0]
-# print(intersectionPoint);
+#     return acm
 
-xx = []
-for i in xroute:
-    if ( i != intersectionPoint ):
-        xx.append(i)
-    else:
-        xx.append(i);
-        break;
+# # 誤ったルートは記録しないようにしたい
+# goal_path = c2p(X,Y,[])
 
-yy = []
-for i in yroute:
-    if ( i != intersectionPoint ):
-        yy.append(i)
-    else:
-        break;
+# print(" ".join(map(lambda x: str(x) , goal_path)));
 
-yy.reverse()
-xx.extend(yy);
 
-print(" ".join(map(str,xx)))
+##############
+stop = False
+deq = []
+flag = [False] * (N + 1)
+
+def dfs(k, to):
+    global stop
+    if (not stop):
+        deq.append(k)
+        
+    if (k == to):
+        stop = True;
+        
+    flag[k] = True;
+    
+    for v in graph[k]:
+        if(not flag[v]):
+            dfs(v,to)
+        
+    if(not stop and len(deq) > 0):
+        deq.pop()    
+
+dfs(X,Y)
+print(*deq)
+# print(" ".join(map(lambda x: str(x) , deq)));

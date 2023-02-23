@@ -18,6 +18,8 @@ R = len(A)
 
 # 2. 再帰関数でとく
 # どうして左右の移動で偶数奇数問題はないのだろうか？とおもう。
+# 移動してるのはindexであり、indexの値ではない。
+# indexは必ず=1でならんでるから可能なのではないかね
 def search(left, right):
     middle = (left + right) // 2
     if (A[middle] > X):
