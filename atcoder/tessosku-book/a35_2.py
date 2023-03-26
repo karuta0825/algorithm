@@ -6,13 +6,10 @@ A = list(map(int, input().split()))
 
 # dpはどういう構造か？
 # dp[i][j]
-# i段目のj番目の数値e
+# i段目のj番目の数値をもつようにする
 dp = []
-
 for i in range(1, N):
     dp.append([0] * i)
-
-
 dp.append(A)
 
 for i in range(N, 0, -1):
