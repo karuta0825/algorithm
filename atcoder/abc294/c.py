@@ -1,19 +1,15 @@
 N, M = map(int, input().split())
 
-A = list(map(int, input().split()))
-B = list(map(int, input().split()))
+A = list(map(lambda x: (int(x), "A"), input().split()))
+B = list(map(lambda x: (int(x), "B"), input().split()))
 
-a = list(map(lambda x: (A[x], "A"), range(len(A))))
-b = list(map(lambda x: (B[x], "B"), range(len(B))))
-
-C = [*a, *b]
-c = sorted(C, key=lambda x: x[0])
+C = sorted([*A, *B], key=lambda x: x[0])
 
 ansA = []
 ansB = []
-for i in range(len(c)):
+for i in range(len(C)):
 
-    (_, g) = c[i]
+    (_, g) = C[i]
 
     if g == "A":
         ansA.append(i+1)
