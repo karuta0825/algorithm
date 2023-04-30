@@ -3,10 +3,6 @@ N, M = map(int, input().split())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 
-# A = [3, 14, 15, 92]
-
-# B = [6, 53, 58]
-
 a = list(map(lambda x: (A[x], "A"), range(len(A))))
 b = list(map(lambda x: (B[x], "B"), range(len(B))))
 
