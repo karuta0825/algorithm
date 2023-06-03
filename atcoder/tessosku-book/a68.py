@@ -9,6 +9,7 @@ for _ in range(M):
 
 come = [False] * (N+1)
 
+# 第三引数のflowは、nowからgoalに流すことのできる水量を表す
 def dfs(now, goal, flow):
 
     come[now] = True
@@ -18,11 +19,16 @@ def dfs(now, goal, flow):
 
     for to in range(1, N+1):
 
+        # edge[now][to] == 0はパスが存在しないことを意味する
         if come[to] or edge[now][to] == 0:
             continue
 
         f = dfs(to, goal, min(flow, edge[now][to]))
 
+        # １つ目の経路を見つけたけど、その先の経路が全て駄目だったときこの関数の最後のreturn 0に入る
+        # これのときf = 0になる
+        # 上のedge[now][to]の違いは、continueかどうかである
+        # continueになる結果return 0を通過するのでその処理を意味してる
         if f == 0:
             continue
 
