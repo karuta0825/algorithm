@@ -1,12 +1,18 @@
 D = int(input())
 N = int(input())
 
-ary = [0] * D
+Yo = [0] * (D+1)
 
-for lr in [list(map(int, input().split())) for _ in range(N)]:
-    L = lr[0] - 1
-    R = lr[1] - 1
-    for i in range(L, R+1):
-        ary[i] += 1
+for _ in range(N):
+    L, R = map(int, input().split())
 
-print(*ary, sep='\n')
+    Yo[L] += 1
+    # これがないと駄目。
+    if R <= D - 1:
+        Yo[R+1] -= 1
+
+for i in range(1, D+1):
+    Yo[i] = Yo[i] + Yo[i-1]
+
+for i in Yo[1:]:
+    print(i)
