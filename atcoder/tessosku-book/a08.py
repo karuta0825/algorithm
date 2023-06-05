@@ -1,24 +1,28 @@
 H, W = map(int, input().split())
-Xs = [list(map(int, input().split())) for _ in range(H)]
-# Xs = [list(int, input().split()) for _ in range(H)]
+X = [[0] * (W+1)] +
+[
+    [0] + list(map(int, input().split())) for _ in range(H)
+]
+
 Q = int(input())
-ABCD = [list(map(int, input().split())) for _ in range(Q)]
 
-# 愚直なやり方
-# 毎回のループでメモ化するのはあり
-for abcd in ABCD:
-    a = abcd[0] - 1
-    b = abcd[1] - 1
-    c = abcd[2] - 1
-    d = abcd[3] - 1
+# Z = [[0] * (W+1) for _ in range(H+1)]
+# 横に足していく
+# for i in range(1, H+1):
+#     for j in range(1, W+1):
+#         # 今入ってる値に前(左の)値を足してる
+#         Z[i][j] = X[i-1][j-1] + Z[i][j-1]
 
-    value = 0
-    for h in range(a, c + 1):
-        for w in range(b, d + 1):
-            value += Xs[h][w]
-    print(value)
+# for i in range(1, W+1):
+#     for j in range(1, H+1):
+#         # 今入ってる値に前(上の)値を足してる
+#         Z[i][j] = Z[i-1][j] + Z[i][j]
 
+for i in range(1, H+1):
+    for j in range(1, W+1):
+        X[i][j] += -X[i-1][j-1] + X[i-1][j] + X[i][j-1]
 
+for _ in range(Q):
+    A, B, C, D = map(int, input().split())
 
-
-
+    print(X[C][D] + X[A-1][B-1] - X[C][B-1] - X[A-1][D])
