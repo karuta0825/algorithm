@@ -11,6 +11,18 @@ for i in range(1, N):
     else:
         dp[i] = min(dp[i-1] + A[i], dp[i-2] + B[i])
 
-    print(dp)
 
-print(dp[N-1])
+i = N-1
+t = [N]
+
+while i > 0:
+
+    if dp[i] == dp[i-1] + A[i]:
+        i -= 1
+        t.append(i+1)
+    else:
+        i -= 2
+        t.append(i+1)
+
+print(len(t))
+print(*reversed(t))
