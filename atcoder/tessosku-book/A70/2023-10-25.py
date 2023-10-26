@@ -27,7 +27,7 @@ def two2ten(ary):
 
 m = defaultdict(list)
 
-for i in range(2 ** N):
+for i in range(1 << N):
 
     l = ten2two(i, N)
     for X, Y, Z in B:
@@ -40,11 +40,7 @@ for i in range(2 ** N):
         # print(i, list(reversed(l)), [X,Y,Z], list(reversed(c)), j)
         m[i].append(j)
 
-# ここがポイントだった！
-start = 0
-for i in range(N):
-    if A[i] == 1:
-        start += 2 ** i
+start = two2ten(A)
 goal = two2ten([1] * N)
 
 
