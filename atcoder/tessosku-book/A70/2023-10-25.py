@@ -27,35 +27,37 @@ def two2ten(ary):
 
 m = defaultdict(list)
 
-for i in range((1 << (N-1))):
+for i in range(2 ** N):
 
     l = ten2two(i, N)
     for X, Y, Z in B:
         c = l.copy()
-        c[X] = 1 if l[X] == 0 else 0
-        c[Y] = 1 if l[Y] == 0 else 0
-        c[Z] = 1 if l[Z] == 0 else 0
+        c[X] = 1 - l[X]
+        c[Y] = 1 - l[Y]
+        c[Z] = 1 - l[Z]
 
         j = two2ten(c)
         # print(i, list(reversed(l)), [X,Y,Z], list(reversed(c)), j)
         m[i].append(j)
 
-start = two2ten(list(reversed(A)))
+# ここがポイントだった！
+start = 0
+for i in range(N):
+    if A[i] == 1:
+        start += 2 ** i
 goal = two2ten([1] * N)
 
-visited = [0] * (goal+1)
 
+visited = [0] * (goal+1)
 visited[start] = 1
 
 queue = deque()
 queue.append(start)
 
-
-
-# print(m)
 kyori = {}
 kyori[start] = 0
-# 違う距離をもとめるから違うよ。幅優先だけど前の情報をつかうやつ!
+
+
 while len(queue) > 0:
 
     q = queue.popleft()
